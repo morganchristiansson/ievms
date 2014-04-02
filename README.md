@@ -18,7 +18,7 @@ project.
 Quickstart
 ==========
 
-Just paste this into a terminal: `curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash`
+Just paste this into a terminal: `curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | IEVMS_MIRROR="http://192.168.160.111:9292" bash`
 
 
 Requirements
@@ -91,11 +91,11 @@ Installation
 
    * Install IE versions 6, 7, 8, 9 and 10.
 
-        curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash
+        curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | IEVMS_MIRROR="http://192.168.160.111:9292"bash
 
    * Install specific IE versions (IE7 and IE9 only for example):
 
-        curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS="7 9" bash
+        curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | IEVMS_VERSIONS="7 9" IEVMS_MIRROR="http://192.168.160.111:9292" bash
 
 3. Launch Virtual Box.
 
@@ -121,7 +121,7 @@ Specifying the install path
 
 To specify where the VMs are installed, use the `INSTALL_PATH` variable:
 
-    curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | INSTALL_PATH="/Path/to/.ievms" bash
+    curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | INSTALL_PATH="/Path/to/.ievms" IEVMS_MIRROR="http://192.168.160.111:9292" bash
 
 
 Passing additional options to curl
@@ -130,7 +130,7 @@ Passing additional options to curl
 The `curl` command is passed any options present in the `CURL_OPTS` 
 environment variable. For example, you can set a download speed limit:
 
-    curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | CURL_OPTS="--limit-rate 50k" bash
+    curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | CURL_OPTS="--limit-rate 50k" IEVMS_MIRROR="http://192.168.160.111:9292" bash
 
 
 Features
@@ -167,7 +167,7 @@ includes the updated browser version.
 **NOTE:** If you'd like to disable XP VM reuse for IE7 and IE8, set the 
 environment variable `REUSE_XP` to anything other than `yes`:
 
-    curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | REUSE_XP="no" bash
+    curl -s https://raw.github.com/moneyadviceservice/ievms/modern-ie-mirror/ievms.sh | REUSE_XP="no" IEVMS_MIRROR="http://192.168.160.111:9292" bash
 
 
 Control ISO
